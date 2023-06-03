@@ -10,10 +10,6 @@ if (body.hasOwnProperty('content')) {
         body['content']['adType'] = 0
         console.log("去广告")
     }
-    // 青少年弹窗
-    if (body['content'].hasOwnProperty('teenagersPassword')) {
-        body['content']['teenagersPassword'] = '12345678'
-    }
 }
 
 body = JSON.stringify(body)
