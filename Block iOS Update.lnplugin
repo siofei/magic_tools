@@ -1,0 +1,15 @@
+# Block iOS Update
+
+#!name=屏蔽ios更新
+#!desc=屏蔽苹果系统更新
+#!openUrl=
+#!author=
+#!homepage=
+#!icon=https://github.com/blackmatrix7/ios_rule_script/blob/master/icon/color/apple.png
+
+
+[Rule]
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,xp.apple.com,REJECT
