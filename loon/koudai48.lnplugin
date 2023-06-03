@@ -3,7 +3,7 @@
 #!openUrl=
 #!author=
 #!homepage=
-#!icon=https://github.com/siofei/magic_tools/blob/main/koudai48_logo.png
+#!icon=https://github.com/siofei/magic_tools/blob/main/icon/koudai48_logo.png
 
 [Script]
 http-response ^https:\/\/pocketapi\.48\.cn\/home\/api\/ad\/v2 script-path=https://github.com/siofei/magic_tools/raw/main/Scripts/koudai48ad.js, requires-body=true, timeout=10, tag=口袋48开屏广告
