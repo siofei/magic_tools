@@ -2,8 +2,8 @@
 
 
 
-const $ = new Env(title, true)
 let title = '🔔口袋48签到'
+const $ = new Env(title, true)
 let succesMsg = $persistentStore.read("LOG")=="开启"?true:false
 let token = $persistentStore.read("koudai48Token")
 if (token == "") {
