@@ -22,7 +22,7 @@ const checkinUrl = 'https://pocketapi.48.cn/user/api/v1/checkin'
 
 $.log('🤖签到操作')
 Checkin()
-$.done()
+
 
 
 
