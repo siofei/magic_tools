@@ -5,7 +5,7 @@
 const $ = new Env(title, true)
 let title = '🔔口袋48签到'
 let succesMsg = $persistentStore.read("LOG")=="开启"?true:false
-let token = $persistentStore.read("token")
+let token = $persistentStore.read("koudai48Token")
 if (token = "") {
     $.msg(title,'请先设置token')
     $.done()
