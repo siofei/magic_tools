@@ -10,7 +10,7 @@ if (token == "") {
     $.msg(title,'请先设置token')
     $.done()
 }
-$.msg(token)
+
 // 开启通知
 let headers = {
     'Content-Type': 'application/json',
