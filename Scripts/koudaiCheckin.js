@@ -2,6 +2,7 @@
 
 
 
+const $ = new Env(title, true)
 let title = '🔔口袋48签到'
 let succesMsg = $persistentStore.read("LOG")=="开启"?true:false
 let token = $persistentStore.read("token")
@@ -11,7 +12,6 @@ if (token = "") {
 }
 $.msg(token)
 // 开启通知
-const $ = new Env(title, true)
 let headers = {
     'Content-Type': 'application/json',
     'accept': '*/*',
