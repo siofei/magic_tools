@@ -4,7 +4,7 @@
 if ($persistentStore.read('开启签到') == '关闭'){return}
 let title = '🔔口袋48签到'
 const $ = new Env(title, true)
-let succesMsg = $persistentStore.read("LOG")=="开启"?true:false
+let succesMsg = $persistentStore.read("签到成功通知")=="开启"?true:false
 let token = $persistentStore.read("koudai48Token")
 if (token == "") {
     $.msg(title,'请先设置token')
