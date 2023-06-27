@@ -11,6 +11,7 @@ if (token == "") {
     $.msg(title,'请先设置token')
     $.done()
 }
+$.log('token:', token, )
 
 let headers = {
     'Content-Type': 'application/json',
