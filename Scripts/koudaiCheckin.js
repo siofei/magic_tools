@@ -50,7 +50,7 @@ function Checkin() {
             if (succesMsg) {
                 let msg = ''
                 if (body['message'] == 'ok') {
-                    msg = `签到成功\n连续签到天数:${body['content']['days']}\n经验+${body['content']['addExp']}\n鸡翅+${body['content']['addSupport']}\n鸡腿+${body['content']['addMoney']}`
+                    msg = `签到成功\n连续签到${body['content']['days']}天\n经验+${body['content']['addExp']}\n鸡翅+${body['content']['addSupport']}\n鸡腿+${body['content']['addMoney']}`
                 } else {
                     msg = body['message']
                 }
