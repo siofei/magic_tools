@@ -16,7 +16,7 @@ if (successMsg) {
 let token = $request.headers['token']
 if (token) {
     $.log('成功获取token', token)
-    if (succesMsg && $.getdata('koudai48Token') != token) {
+    if (successMsg && $.getdata('koudai48Token') != token) {
         $.msg(title, token)
     }
     $.setdata(token, 'koudai48Token')
