@@ -22,7 +22,6 @@ let headers = {
 }
 const checkinUrl = 'https://pocketapi.48.cn/user/api/v1/checkin'
 
-$.log('🤖签到操作')
 Checkin()
 $.done()
 
@@ -49,7 +48,13 @@ function Checkin() {
             let body = JSON.parse(data)
             $.log(body['message'], data)
             if (succesMsg) {
-                $.msg(title, body['message'])
+                let msg = ''
+                if (body['message'] == 'ok') {
+                    msg = `签到成功\n连续签到天数:${body['content']['days']}\n经验+${body['content']['addExp']}\n鸡翅+${body['content']['addSupport']}\n鸡腿+${body['content']['addMoney']}`
+                } else {
+                    msg = body['message']
+                }
+                $.msg(title, msg)
             }
         }
     })
