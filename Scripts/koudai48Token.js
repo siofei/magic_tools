@@ -1,58 +1,23 @@
 
 
-
-if ($persistentStore.read('开启签到') == '关闭'){return}
-let title = '🔔口袋48签到'
+let title = '🔔获取口袋48token'
 const $ = new Env(title, true)
-// 开启通知
+
 let succesMsg = $.getdata("签到成功通知")=="开启"?true:false
-let token = $.getdata("koudai48Token")
-if (token == "") {
-    $.msg(title,'请先设置token')
-    $.done()
+let token = $requests.headers['token']
+if (token) {
+    $.log('成功获取token', token)
+    if (succesMsg) {
+        $.log('成功获取token', token)
+    }
+    $.setdata('koudai48Token', token)
 }
-
-let headers = {
-    'Content-Type': 'application/json',
-    'accept': '*/*',
-    'accept-language': 'zh-CN,zh-Hansq=0.9',
-    'user-agent': 'PocketFans201807/7.1.1 (iPhone; iOS 16.5; Scale/3.00)',
-    'token': token
-}
-const checkinUrl = 'https://pocketapi.48.cn/user/api/v1/checkin'
-
-$.log('🤖签到操作')
-Checkin()
 $.done()
 
 
 
 
 
-function Checkin() {
-    let option = {
-        url: checkinUrl,
-        headers: headers,
-        body: {}
-    }
-    $.log('开始签到')
-    $.post(option, function (error, response, data) {
-        if (error) {
-            $.log('错误原因：' + error)
-            $.msg(title, '❌签到失败', '请稍后再试，或者更新token后再试')
-        } else if(!data)
-        {
-            $.log('没有获取到数据')
-        }
-        else {
-            let body = JSON.parse(data)
-            $.log(body['message'], data)
-            if (succesMsg) {
-                $.msg(title, body['message'])
-            }
-        }
-    })
-}
 
 
 
