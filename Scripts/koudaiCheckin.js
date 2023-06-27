@@ -3,9 +3,9 @@
 
 let title = '🔔口袋48签到'
 const $ = new Env(title, true)
-if ($.getdata('开启签到') == '关闭'){return}
+if ($.getdata('自动签到') == '关闭'){return}
 // 开启通知
-let succesMsg = $.getdata("签到成功通知")=="开启"?true:false
+let succesMsg = $.getdata("运行成功通知")=="开启"?true:false
 let token = $.getdata("koudai48Token")
 if (token) {
     $.msg(title,'请先设置token')

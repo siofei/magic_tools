@@ -4,9 +4,10 @@
 #!author=
 #!homepage=
 #!icon=https://github.com/siofei/magic_tools/blob/main/icon/koudai48_logo.png?raw=true
-#!input = koudai48Token
-#!select = 开启签到,开启,关闭
-#!select = 签到成功通知,开启,关闭
+// #!input = koudai48Token
+#!select = 自动签到,开启,关闭
+#!select = 获取token,开启,关闭
+#!select = 运行成功通知,开启,关闭
 
 [Rewrite]
 // 青少年模式
