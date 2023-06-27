@@ -5,7 +5,7 @@ const $ = new Env(title, true)
 if ($.getdata('获取token') == '关闭'){
   $.log('已关闭自动获取token')
   $.done()
-  return}
+  }
 let succesMsg = $.getdata("运行成功通知")=="开启"?true:false
 let token = $request.headers['token']
 if (token) {

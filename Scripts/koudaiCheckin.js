@@ -7,7 +7,6 @@ const $ = new Env(title, true)
 if ($.getdata('自动签到') == '关闭'){
   $.log('已关闭自动签到')
   $.done()
-  return
 }
 // 开启通知
 let successMsg = $.getdata("运行成功通知")
