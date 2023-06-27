@@ -4,7 +4,7 @@ let title = '🔔获取口袋48token'
 const $ = new Env(title, true)
 
 let succesMsg = $.getdata("签到成功通知")=="开启"?true:false
-let token = $requests.headers['token']
+let token = $request.headers['token']
 if (token) {
     $.log('成功获取token', token)
     if (succesMsg) {
