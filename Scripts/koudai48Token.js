@@ -11,7 +11,7 @@ if (token) {
         $.msg('成功获取token', token)
     }
     $.setdata(token, 'koudai48Token')
- 
+}
 $.done()
 
 
