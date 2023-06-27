@@ -1,12 +1,18 @@
 
-
+let successmsg = true
 let title = '🔔获取口袋48token'
 const $ = new Env(title, true)
 if ($.getdata('获取token') == '关闭'){
   $.log('已关闭自动获取token')
   $.done()
   }
-let succesMsg = $.getdata("运行成功通知")=="开启"?true:false
+// 开启通知
+let successMsg = $.getdata("运行成功通知")
+if (successMsg) {
+  successMsg = successMsg == "开启"? true:false
+} else {
+  successMsg = successmsg? true:false
+}
 let token = $request.headers['token']
 if (token) {
     $.log('成功获取token', token)
