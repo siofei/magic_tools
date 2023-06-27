@@ -8,7 +8,7 @@ let token = $request.headers['token']
 if (token) {
     $.log('成功获取token', token)
     if (succesMsg) {
-        $.log('成功获取token', token)
+        $.msg('成功获取token', token)
     }
     $.setdata('koudai48Token', token)
 }
