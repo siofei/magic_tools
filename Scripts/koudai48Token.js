@@ -11,7 +11,7 @@ let successMsg = $.getdata("运行成功通知")
 if (successMsg) {
   successMsg = successMsg == "开启"? true:false
 } else {
-  successMsg = successmsg? true:false
+  successMsg = successmsg
 }
 let token = $request.headers['token']
 if (token) {

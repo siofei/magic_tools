@@ -13,7 +13,7 @@ let successMsg = $.getdata("运行成功通知")
 if (successMsg) {
   successMsg = successMsg == "开启"? true:false
 } else {
-  successMsg = successmsg? true:false
+  successMsg = successmsg
 }
 let token = $.getdata("koudai48Token")
 if (!token) {
@@ -57,7 +57,7 @@ function Checkin() {
             $.log(body['message'], data)
             if (successMsg) {
                 let msg = ''
-                if (body['message'] == 'ok') {
+                if (body['message'] == 'OK') {
                     msg = `签到成功\n连续签到${body['content']['days']}天\n经验+${body['content']['addExp']}\n鸡翅+${body['content']['addSupport']}\n鸡腿+${body['content']['addMoney']}`
                 } else {
                     msg = body['message']
