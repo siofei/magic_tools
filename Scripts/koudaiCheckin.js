@@ -56,13 +56,15 @@ function Checkin() {
             let body = JSON.parse(data)
             $.log(body['message'], data)
             if (successMsg) {
-                let msg = ''
+                let desc = ''
+                let subt = ''
                 if (body['message'] == 'OK') {
-                    msg = `签到成功\n连续签到${body['content']['days']}天\n经验+${body['content']['addExp']}\n鸡翅+${body['content']['addSupport']}\n鸡腿+${body['content']['addMoney']}`
+                  subt = '签到成功'
+                  desc = `经验+${body['content']['addExp']}\n鸡翅+${body['content']['addSupport']}${body['content']['addMoney']!=0?'\n鸡腿+'+body['content']['addMoney']:''}`
                 } else {
-                    msg = body['message']
+                  subt = body['message']
                 }
-                $.msg(title, msg)
+                $.msg(title, subt, desc)
             }
         }
     })
