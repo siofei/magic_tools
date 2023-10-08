@@ -8,7 +8,7 @@ if (body.hasOwnProperty('content')) {
     // 开屏广告
     if (body['content'].hasOwnProperty('adType')){
         body['content']['adType'] = 0
-        console.log("去广告")
+        console.log("去开屏广告")
     }
 }
 
