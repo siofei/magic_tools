@@ -1,0 +1,23 @@
+#!name=12306
+#!desc=去除开屏广告
+#!openUrl=
+#!author=
+#!homepage=
+#!icon=https://github.com/siofei/magic_tools/blob/main/icon/koudai48_logo.png?raw=true
+// #!input = koudai48Token
+#!select = 自动签到,开启,关闭
+#!select = 获取token,开启,关闭
+#!select = 运行成功通知,开启,关闭
+
+[Rule]
+// 青少年模式
+URL-REGEX, ^https:\/\/pocketapi\.48\.cn\/user\/api\/v1\/user\/info\/reload$, REJECT
+
+[Script]
+http-response ^https:\/\/pocketapi\.48\.cn\/home\/api\/ad\/v2 script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/koudai48ad.js, requires-body=true, enabled=true, timeout=10, tag=口袋48开屏广告
+http-request ^https:\/\/pocketapi\.48\.cn\/user\/api\/v1\/user\/money$ script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/koudai48Token.js, requires-body=true, enabled=true, timeout=10, tag=口袋48获取token
+cron "48 12 * * *" script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/koudaiCheckin.js, tag = 12306开屏广告, enable=true
+
+
+[MITM]
+hostname = ad.12306.cn

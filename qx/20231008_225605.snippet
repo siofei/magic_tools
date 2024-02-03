@@ -1,0 +1,7 @@
+hostname = pocketapi.48.cn
+
+^https:\/\/pocketapi\.48\.cn\/user\/api\/v1\/user\/info\/reload$ url reject-200
+# 开屏广告
+https:\/\/pocketapi\.48\.cn\/home\/api\/ad\/v2 url script-response-body https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/koudai48ad.js
+# 签到
+https:\/\/pocketapi\.48\.cn\/user\/api\/v1\/user\/money$ url script-request-body https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/koudai48Token.js
