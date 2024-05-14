@@ -1,4 +1,9 @@
-DOMAIN-SUFFIX,tktn.be // Added for: lb-den-01.tktn.be:443
-IP-CIDR,205.164.56.30/32,no-resolve // Added for: 205.164.56.30:5222
-IP-CIDR,69.46.75.84/32,no-resolve // Added for: 69.46.75.84:5222
-IP-CIDR,205.164.56.26/32,no-resolve // Added for: 205.164.56.26:5222
+DOMAIN-SUFFIX,tktn.be 
+IP-CIDR,205.164.56.30/32,no-resolve
+IP-CIDR,69.46.75.84/32,no-resolve  
+IP-CIDR,205.164.56.26/32,no-resolve 
+IP-CIDR,205.164.56.28/32,no-resolve 
+IP-CIDR,69.46.75.83/32,no-resolve 
+IP-CIDR,205.164.56.27/32,no-resolve 
+IP-CIDR,205.164.56.29/32,no-resolve 
+IP-CIDR,69.46.75.82/32,no-resolve
