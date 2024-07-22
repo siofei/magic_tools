@@ -1,15 +1,4 @@
-// fetch("https://api-cdn.taoqitu.me/gateway/tqt/cn/user/sign", {
-//   "headers": {
-//     "authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NTYwNywic2Vzc2lvbiI6IjYxMjZmYjUwMTJjMWJiOTAzYjgwMTg2NzVmNGNkYjRhIn0.KH6VgZk3GYKDM-git9weMjMJLarfi3oNM7API_0cuyo",
-//     "sec-ch-ua": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Microsoft Edge\";v=\"122\"",
-//     "sec-ch-ua-mobile": "?0",
-//     "sec-ch-ua-platform": "\"macOS\"",
-//     "Referer": "https://vip.taoqitu.pro/",
-//     "Referrer-Policy": "strict-origin-when-cross-origin"
-//   },
-//   "body": null,
-//   "method": "GET"
-// });
+
 /*
 [Script]
 淘气兔签到获取token = type=cron,cronexp=6 0 * * *,script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/%E6%B7%98%E6%B0%94%E5%85%94%E7%AD%BE%E5%88%B0.js
