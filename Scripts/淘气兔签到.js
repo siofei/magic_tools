@@ -12,8 +12,8 @@
 // });
 /*
 [Script]
-淘气兔签到获取token = type=cron,cronexp=6 0 * * *,script-path=淘气兔签到.js
-淘气兔签到 = type=cron,cronexp=52 10 * * *,script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js,timeout=300,script-update-interval=0
+淘气兔签到获取token = type=cron,cronexp=6 0 * * *,script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/%E6%B7%98%E6%B0%94%E5%85%94%E7%AD%BE%E5%88%B0.js
+淘气兔签到 = type=cron,cronexp=52 10 * * *,script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/%E6%B7%98%E6%B0%94%E5%85%94%E7%AD%BE%E5%88%B0.js,timeout=300,script-update-interval=0
 [MITM]
 hostname = api-cdn.taoqitu.me
 
