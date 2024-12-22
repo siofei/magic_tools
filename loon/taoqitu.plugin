@@ -6,7 +6,7 @@
 #!icon=https://vip.taoqitu.pro/img/logo.png
 
 [Argument]
-AccountToken = switch, true, false, tag = 获取账号Token, desc = 获取账号Token
+AccountToken = switch, false, true, tag = 获取账号Token, desc = 获取账号Token
 TimingParameters = input, "30 11 * * *", tag = 定时参数, desc = 这里需要输入符合CRON表达式的参数
 
 [Script]
