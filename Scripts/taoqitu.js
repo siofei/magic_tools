@@ -12,8 +12,9 @@ let notify = false;
 
 let title = "🔔淘气兔签到";
 const $ = new Env(title, true);
-
+$.log('start')
 if(typeof $request != 'undefined'){
+	$.log('request')
 	let token = $request.headers['authorization']
 	if (token){
 		$.setdata(token, 'taoqitu_token')
@@ -38,7 +39,7 @@ let headers = {
 	"Referrer-Policy": "strict-origin-when-cross-origin",
 };
 const checkinUrl = "https://api-cdn.taoqitu.me/gateway/tqt/cn/user/sign";
-
+$.log('checkinUrl:', checkinUrl)
 Checkin();
 
 async function Checkin() {
