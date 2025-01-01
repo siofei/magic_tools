@@ -15,7 +15,7 @@ const $ = new Env(title, true);
 $.log('start')
 if(typeof $request != 'undefined'){
 	$.log('request')
-	let token = $request.headers['authorization']
+	let token = $request.headers['authorization']?? $request.headers['Authorization']
 	$.log(JSON.stringify($request.headers))
 	if (token){
 		$.setdata(token, 'taoqitu_token')
