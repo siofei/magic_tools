@@ -8,7 +8,7 @@ hostname = api-cdn.taoqitu.me
 
 */
 
-let notify = false;
+let notify = Boolean($argument ?? true);
 
 let title = "🔔淘气兔签到";
 const $ = new Env(title, true);
