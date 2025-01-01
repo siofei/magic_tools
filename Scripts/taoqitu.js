@@ -17,6 +17,7 @@ if(typeof $request != 'undefined'){
 	$.log('request')
 	let token = $request.headers['authorization']?? $request.headers['Authorization']
 	$.log(JSON.stringify($request.headers))
+	$.log(token)
 	if (token){
 		$.setdata(token, 'taoqitu_token')
 		$.msg('获取淘气兔token成功',token)
