@@ -1,12 +1,12 @@
 
 /*
 [Script]
-http-request ^https:\/\/api-cdn\.taoqitu\.me\/gateway\/tqt\/cn\/user\/sign script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/%E6%B7%98%E6%B0%94%E5%85%94%E7%AD%BE%E5%88%B0.js,requires-body=true, timeout=10, tag=淘气兔签到
-cron "52 10 * * *" script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/%E6%B7%98%E6%B0%94%E5%85%94%E7%AD%BE%E5%88%B0.js,timeout=300,tag=淘气兔签到
+http-request ^https:\/\/api-cdn\.taoqitu\.me\/gateway\/tqt\/cn\/user\/sign script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/taoqitu.js,requires-body=true, timeout=10, tag=淘气兔签到
+cron "52 10 * * *" script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/taoqitu.js,timeout=300,tag=淘气兔签到
 [MITM]
 hostname = api-cdn.taoqitu.me
 
-*/https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/%E6%B7%98%E6%B0%94%E5%85%94%E7%AD%BE%E5%88%B0.js
+*/
 
 let notify = false;
 
