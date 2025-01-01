@@ -21,7 +21,6 @@ if(typeof $request != 'undefined'){
 	if (token){
 		$.setdata(token, 'taoqitu_token')
 		$.msg('获取淘气兔token成功',token)
-		$.log(token)
 	}else{
 		$.msg('获取淘气兔token失败', '')
 	}
