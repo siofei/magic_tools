@@ -1,4 +1,4 @@
-#!name=photomator
+#!name=𝐑𝐞𝐯𝐞𝐧𝐮𝐞𝐂𝐚𝐭
 #!desc=今天也要吸猫猫吖
 #!author=𝐝𝐝𝐠𝐤𝐬𝐟𝟐𝟎𝟏𝟑
 #!tag = 解锁
@@ -6,6 +6,7 @@
 #!unlockapplist=https://appraven.net/collection/77299969
 #!tgchannel=https://t.me/ddgksf2021
 #!moduleUrl=https://github.com/ddgksf2013/Modules/raw/main/RevenueCat.Vip.sgmodule
+#!homepage= https://appraven.net/collection/77299969
 #!howtouse=小火箭、Surge用户直接添加模块，QuantumultX用户添加重写时打开解析器
 
 [Script]
