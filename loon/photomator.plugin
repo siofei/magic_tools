@@ -1,0 +1,18 @@
+#!name=photomator
+#!desc=今天也要吸猫猫吖
+#!author=𝐝𝐝𝐠𝐤𝐬𝐟𝟐𝟎𝟏𝟑
+#!tag = 解锁
+#!icon= https://pro-cdn.pixelmator.com/app-icons/navigation/icon-photo-v1.png
+#!unlockapplist=https://appraven.net/collection/77299969
+#!tgchannel=https://t.me/ddgksf2021
+#!moduleUrl=https://github.com/ddgksf2013/Modules/raw/main/RevenueCat.Vip.sgmodule
+#!howtouse=小火箭、Surge用户直接添加模块，QuantumultX用户添加重写时打开解析器
+
+[Script]
+# ～ RevenueCat@ddgksf2013
+http-response ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body=true, timeout=60, tag=RevenueCatVip
+
+http-request ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers) script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js, timeout=60, tag=RevenueCatDeleteHeader
+
+[MITM]
+hostname = api.revenuecat.com, api.rc-backup.com
