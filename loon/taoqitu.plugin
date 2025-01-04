@@ -8,7 +8,7 @@
 [Argument]
 AccountToken = switch, false, true, tag = 获取账号Token, desc = 获取账号Token
 successNotify = switch, false, true, tag = 签到成功时发送通知, desc = 签到成功时发送通知
-TimingParameters = input, "30 11 * * *", tag = 定时参数, desc = 这里需要输入符合CRON表达式的参数
+TimingParameters = input, "30 11 * *", tag = 定时参数, desc = 这里需要输入符合CRON表达式的参数
 
 [Script]
 http-request ^https:\/\/api-cdn\.taoqitu\.me\/gateway\/tqt\/cn\/user\/sign script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/taoqitu.js, requires-body=true, timeout=60, tag=淘气兔获取cookie, enable={AccountToken}
