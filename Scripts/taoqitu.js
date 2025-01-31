@@ -7,8 +7,11 @@ cron "52 10 * * *" script-path=https://raw.githubusercontent.com/siofei/magic_to
 hostname = api-cdn.taoqitu.me
 
 */
+let notify = false
+if ($argument) {
+    notify = Boolean($argument ?? true);
+}
 
-let notify = Boolean($argument ?? true);
 
 let title = "🔔淘气兔签到";
 const $ = new Env(title, true);
