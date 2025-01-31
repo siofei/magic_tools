@@ -8,7 +8,7 @@ hostname = api-cdn.taoqitu.me
 
 */
 let notify = false
-if ($argument) {
+if (typeof $argument != "undefined") {
     notify = Boolean($argument ?? true);
 }
 
