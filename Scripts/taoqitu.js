@@ -7,7 +7,7 @@ cron "52 10 * * *" script-path=https://raw.githubusercontent.com/siofei/magic_to
 hostname = api-cdn.taoqitu.me
 
 */
-let notify = false
+let notify = true
 if (typeof $argument != "undefined") {
     notify = Boolean($argument ?? true);
 }
