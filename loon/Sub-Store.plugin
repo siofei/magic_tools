@@ -9,8 +9,8 @@
 
 [Argument]
 syncSwitch = switch, true, false, tag = 自动备份, desc = 此开关控制插件Sub-Store同步
+syncFailed = switch, false, true, tag = 同步成功时通知
 TimingParameters = input, "55 23 * * *", tag = 定时备份参数, desc = 这里需要输入符合CRON表达式的参数
-syncFailed = select,"false","true", tag = 同步成功时通知
 
 
 [Rule]
@@ -23,4 +23,4 @@ hostname=sub.store
 http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-1.min.js, requires-body=true, timeout=120, tag=Sub-Store Core
 http-request ^https?:\/\/sub\.store script-path=https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-0.min.js, requires-body=true, timeout=120, tag=Sub-Store Simple
 
-cron {TimingParameters} script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/cron-sync-artifacts.min.js, timeout=120, tag=Sub-Store Sync,argument=notify={syncFailed},enable={syncSwitch}
+cron {TimingParameters} script-path=https://raw.githubusercontent.com/siofei/magic_tools/main/Scripts/cron-sync-artifacts.min.js, timeout=120, tag=Sub-Store Sync,argument="notify={syncFailed}",enable={syncSwitch}
